@@ -1,5 +1,4 @@
 import socket
-import threading
 
 with socket.socket(socket.AF_INET,socket.SOCK_DGRAM) as socket_server:
     socket_server.bind(("0.0.0.0",1234)) #0.0.0.0 represents acceptting any ip
@@ -17,8 +16,6 @@ with socket.socket(socket.AF_INET,socket.SOCK_DGRAM) as socket_server:
         socket_server.sendto(data,address)
         
 
-        # th_client = threading.Thread(target=client_recv,args=[client,address])
-        # th_client.start()
             
 
 
